@@ -4,8 +4,8 @@ import Container from "./Container/Container";
 import Logo from "./Logo";
 import Logout from "./Header/Logout";
 import RTE from './RTE'
-import Signup from "../pages/Signup";
-import Login from "../pages/Login";
+import Signup from './Signup'
+import Login from "./Login";
 import PostForm from './Post-form/PostForm'
 import PostCard from "./PostCard";
 import Authlayout from './AuthLayout'
