@@ -4,7 +4,7 @@ import { Container, PostCard } from '../components'
 
 function AllPosts() {
     const [posts, setPosts] = useState([])
-    useEffect(()=>{
+    // useEffect(()=>{
         appwriteService.getAllPosts([])
         .then((posts)=> {
             if(posts){
@@ -12,7 +12,7 @@ function AllPosts() {
             }
         })
         
-    },[])
+    // },[])
   return (
     <div className="w-full py-8">
         <Container>
