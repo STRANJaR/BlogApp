@@ -9,8 +9,7 @@ import { useSelector } from 'react-redux'
 
 
 export default function PostForm({post}) {
-    const {register, handleSubmit, watch, setValue,
-    control, getValues} = useForm({
+    const {register, handleSubmit, watch, setValue, control, getValues} = useForm({
         defaultValues: {
             title: post?.title || '',
             slug: post?.$id || '',
@@ -20,7 +19,7 @@ export default function PostForm({post}) {
     })
 
     const navigate = useNavigate()
-    const userData = useSelector(state => state.auth.userData)
+    const userData = useSelector((state) => state.auth.userData)
 
     const submit = async(data) =>{
         if(post){
@@ -108,7 +107,7 @@ export default function PostForm({post}) {
                 {post && (
                     <div className="w-full mb-4">
                         <img
-                            src={appwriteService.getFilePreview(post.featuredImage)}
+                            src={appwriteService.getFilePreview(post.featuredImage || '')}
                             alt={post.title}
                             className="rounded-lg"
                         />

@@ -134,16 +134,6 @@ export class Service{
             conf.appwriteBucketId,
             fileId
         )
-    //     try {
-    //        return this.bucket.getFilePreview(
-    //             conf.appwriteBucketId,
-    //             fileId
-    //         )
-    //         return true;
-    //     } catch (error) {
-    //         console.log("appwrite service :: previewFile", error);
-    //         return false;
-    //     }
     
     }
 }
