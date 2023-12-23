@@ -1,10 +1,10 @@
 import React from 'react'
-import logo from '../assets/bird_2.jpg'
+// import cloudImage from '../assets/cloud.jpg'
 
-function Logo({widt = '100px'}) {
+function Logo({width = '100px'}) {
   return (
     <div>
-      Logo
+      <img className='w-14 rounded-full' src='' alt="" />
     </div>
   )
 }

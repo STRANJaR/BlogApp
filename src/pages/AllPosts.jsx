@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import appwriteService from '../appwrite/config'
 import { Container, PostCard } from '../components'
+import '../index.css'
 
 function AllPosts() {
     const [posts, setPosts] = useState([])
@@ -15,7 +16,9 @@ function AllPosts() {
         
     // },[])
   return (
-    <div className="w-full py-8">
+    <div className="w-full py-8 scroll-mt-72">
+     
+
         <Container>
             <div className="flex flex-wrap">
 

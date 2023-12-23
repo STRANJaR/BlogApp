@@ -4,7 +4,7 @@ import {Button, Input, Select, RTE} from '..'
 import appwriteService from '../../appwrite/config'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-
+import '../../index.css'
 
 
 
@@ -98,7 +98,7 @@ export default function PostForm({post}) {
             </div>
             <div className="w-1/3 px-2">
                 <Input
-                    label="Featured Image :"
+                    label="Image :"
                     type="file"
                     className="mb-4"
                     accept="image/png, image/jpg, image/jpeg, image/gif"
@@ -119,7 +119,7 @@ export default function PostForm({post}) {
                     className="mb-4"
                     {...register("status", { required: true })}
                 />
-                <Button type="submit" bgcolor={post ? "bg-green-500" : undefined} className="w-full">
+                <Button type="submit" bgcolor={post ? "bg-primary" : undefined} className="w-full text-onBackgroundText">
                     {post ? "Update" : "Submit"}
                 </Button>
             </div>

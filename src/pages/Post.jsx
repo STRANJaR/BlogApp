@@ -43,20 +43,20 @@ export default function Post() {
                     />
 
                     {isAuthor && (
-                        <div className="absolute right-6 top-6">
+                        <div className="absolute right-2 top-2">
                             <Link to={`/edit-post/${post.$id}`}>
-                                <Button bgcolor="bg-green-500"  className="mr-3">
+                                <Button  bgcolor="bg-green-500"  className="mr-3 text-onBackgroundText">
                                     Edit
                                 </Button>
                             </Link>
-                            <Button bgcolor="bg-red-500" onClick={deletePost}>
+                            <Button bgcolor="bg-red-500" onClick={deletePost} className="text-onBackgroundText">
                                 Delete
                             </Button>
                         </div>
                     )}
                 </div>
                 <div className="w-full mb-6">
-                    <h1 className="text-2xl font-bold">{post.title}</h1>
+                    <h1 className="text-2xl font-bold text-center">{post.title}</h1>
                 </div>
                 <div className="browser-css">
                     {parse(post.content)}

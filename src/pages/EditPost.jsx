@@ -23,7 +23,7 @@ function EditPost() {
 
 
   return post ? (
-    <div className="py-8 bg-background">
+    <div className=" bg-onBackgroundText text-surface">
         <Container>
             <PostForm post={post} />
         </Container>

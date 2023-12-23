@@ -3,7 +3,7 @@ import {Container, Logo, Logout} from '../index'
 import { Link } from 'react-router-dom'
 import { useSelector} from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-
+// import './Header.css'
 
 function Header() {
 
@@ -40,7 +40,7 @@ function Header() {
   ]
 
   return (
-    <header className='py-3 shadow bg-secondary text-onBackgroundText rounded-lg'>
+    <header className='py-2  min-w-full bg-background  shadow  text-onBackgroundText font-medium '>
       <Container>
         <nav className='flex'>
           <div className='mr-4'>
@@ -51,13 +51,18 @@ function Header() {
           </div>
           
           <ul className='flex ml-auto'>
+            <div className="menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
             {navItems.map((item)=>
             item.active ? (
               <li key={item.name}>
                 <button 
                 onClick={()=> navigate(item.slug)}
-                className='inline-block px-6 py-2
-                duration-200 hover:bg-ocean rounded-full'>
+                className='inline-block  px-6 py-2
+                duration-200 hover:bg-onBackgroundText hover:text-background transition rounded-full'>
                   {item.name}
                 </button>
               </li>
